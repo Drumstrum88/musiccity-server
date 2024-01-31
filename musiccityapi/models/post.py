@@ -2,6 +2,7 @@ from django.db import models
 from musiccityapi.models.category import Category
 
 from musiccityapi.models.reaction import Reaction
+from musiccityapi.models.user import User
 
 class Post(models.Model):
   post_title = models.CharField(max_length=50, default='')
