@@ -1,13 +1,13 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import  status
-from musiccityapi.models.category import Category
+from rest_framework import status
 from rest_framework.decorators import action
-from musiccityapi.models.post import Post
-from musiccityapi.models.postReactions import PostReaction
-from musiccityapi.models.user import User
-from musiccityapi.serializers.post_reactions import PostReactionSerializer
-from musiccityapi.serializers.post_serializer import PostSerializer
+from musiccityapi.models import Category
+from musiccityapi.models import Post
+from musiccityapi.models import PostReaction
+from musiccityapi.models import User
+from musiccityapi.serializers import PostReactionSerializer
+from musiccityapi.serializers import PostSerializer
 
     
 class PostView(ViewSet):
