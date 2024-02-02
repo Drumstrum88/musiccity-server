@@ -17,9 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from musiccityapi.views import check_user, register_user
+from django.urls import include, path
+from rest_framework import routers
+from musiccityapi.views.post_reaction_views import PostReactionView
+
+from musiccityapi.views.post_view import PostView
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'posts', PostView, 'post')
+router.register(r'post_reactions', PostReactionView, 'post_reaction')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('checkuser', check_user),
     path('registeruser', register_user),
+    path('', include(router.urls)),
+
 ]
