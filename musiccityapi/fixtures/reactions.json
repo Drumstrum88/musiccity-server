@@ -1,0 +1,34 @@
+[
+  {
+    "model": "musiccityapi.reaction",
+    "pk": 1,
+    "fields": {
+      "label": "Like",
+      "image_url": "url_to_like_image.jpg"
+    }
+  },
+  {
+    "model": "musiccityapi.reaction",
+    "pk": 2,
+    "fields": {
+      "label": "Love",
+      "image_url": "url_to_love_image.jpg"
+    }
+  },
+  {
+    "model": "musiccityapi.reaction",
+    "pk": 3,
+    "fields": {
+      "label": "Celebrate",
+      "image_url": "url_to_celebrate_image.jpg"
+    }
+  },
+  {
+    "model": "musiccityapi.reaction",
+    "pk": 4,
+    "fields": {
+      "label": "Dislike",
+      "image_url": "url_to_dislike_image.jpg"
+    }
+  }
+]
