@@ -1,0 +1,122 @@
+[
+  {
+    "model": "musiccityapi.post",
+    "pk": 1,
+    "fields": {
+      "post_title": "Top Restaurants in the City",
+      "post_author": 1,
+      "post_content": "Explore the culinary scene with our guide to the best restaurants in the city.",
+      "created_on": "2023-01-15T12:30:00Z",
+      "image_url": "https://example.com/image1.jpg",
+      "categories": 1
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 2,
+    "fields": {
+      "post_title": "Nightlife Hotspots: Where to Party",
+      "post_author": 2,
+      "post_content": "Discover the hottest nightlife spots and dance the night away.",
+      "created_on": "2023-02-01T08:45:00Z",
+      "image_url": "https://example.com/image2.jpg",
+      "categories": 2
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 3,
+    "fields": {
+      "post_title": "Connecting with Nature: Outdoor Adventures",
+      "post_author": 3,
+      "post_content": "Escape the city and explore the beauty of nature with these outdoor adventures.",
+      "created_on": "2023-02-10T15:20:00Z",
+      "image_url": "https://example.com/image3.jpg",
+      "categories": 3
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 4,
+    "fields": {
+      "post_title": "Art Exhibitions Not to Miss",
+      "post_author": 1,
+      "post_content": "Immerse yourself in the local art scene with these must-see exhibitions.",
+      "created_on": "2023-03-05T09:10:00Z",
+      "image_url": "https://example.com/image4.jpg",
+      "categories": 4
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 5,
+    "fields": {
+      "post_title": "Theater Spotlight: Local Performances",
+      "post_author": 2,
+      "post_content": "Experience the magic of local theater with our spotlight on upcoming performances.",
+      "created_on": "2023-03-20T18:45:00Z",
+      "image_url": "https://example.com/image5.jpg",
+      "categories": 5
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 6,
+    "fields": {
+      "post_title": "Hidden Gems in the Dining Scene",
+      "post_author": 3,
+      "post_content": "Discover hidden gems and lesser-known eateries in the city's dining scene.",
+      "created_on": "2023-04-02T14:00:00Z",
+      "image_url": "https://example.com/image6.jpg",
+      "categories": 1
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 7,
+    "fields": {
+      "post_title": "A Night of Jazz: Live Music Experience",
+      "post_author": 1,
+      "post_content": "Immerse yourself in the soulful tunes of jazz with a night of live music.",
+      "created_on": "2023-04-18T10:30:00Z",
+      "image_url": "https://example.com/image7.jpg",
+      "categories": 2
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 8,
+    "fields": {
+      "post_title": "Nature Photography Workshop",
+      "post_author": 2,
+      "post_content": "Join us for a nature photography workshop and capture the beauty of the outdoors.",
+      "created_on": "2023-05-05T12:15:00Z",
+      "image_url": "https://example.com/image8.jpg",
+      "categories": 3
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 9,
+    "fields": {
+      "post_title": "Artists in Residence: Local Creators",
+      "post_author": 3,
+      "post_content": "Meet the local artists in residence and learn about their creative journeys.",
+      "created_on": "2023-05-20T16:40:00Z",
+      "image_url": "https://example.com/image9.jpg",
+      "categories": 4 
+    }
+  },
+  {
+    "model": "musiccityapi.post",
+    "pk": 10,
+    "fields": {
+      "post_title": "Behind the Curtain: Theater Productions",
+      "post_author": 1, 
+      "post_content": "Go behind the scenes of local theater productions and witness the magic unfold.",
+      "created_on": "2023-06-01T09:50:00Z",
+      "image_url": "https://example.com/image10.jpg",
+      "categories": 5 
+    }
+  }
+]

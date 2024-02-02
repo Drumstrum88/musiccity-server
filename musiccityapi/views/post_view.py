@@ -2,7 +2,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import  status
 from musiccityapi.models.category import Category
-
+from rest_framework.decorators import action
 from musiccityapi.models.post import Post
 from musiccityapi.models.postReactions import PostReaction
 from musiccityapi.models.user import User
@@ -35,11 +35,11 @@ class PostView(ViewSet):
         """Handles POST request for a new Post"""
 
         post_author = User.objects.get(pk=request.data.get('post_author'))
-        category = Category.objects.get(pk=request.data.get('categories'))
+        categories = Category.objects.get(pk=request.data.get('categories'))
 
         post = Post.objects.create(
             post_author=post_author,
-            category=category,
+            categories=categories,
             post_title=request.data.get('post_title'),
             post_content=request.data.get('post_content'),
             image_url=request.data.get('image_url'),
@@ -83,7 +83,7 @@ class PostView(ViewSet):
   def destroy(self, request, pk):
     """Handles DELETE for a Post"""
     
-    post = Post.Objects.get(pk=pk)
+    post = Post.objects.get(pk=pk)
     post.delete()
     return Response(None, status=status.HTTP_204_NO_CONTENT)
   
@@ -92,5 +92,5 @@ class PostView(ViewSet):
         """Method to get all the reactions associated with a single post"""
         reactions = PostReaction.objects.filter(post_id=pk)
 
-        serializer = PostReactionSerializer(reactions, many=True)  # Assuming you have a serializer for PostReaction
+        serializer = PostReactionSerializer(reactions, many=True)
         return Response(serializer.data)

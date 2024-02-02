@@ -5,7 +5,7 @@ from rest_framework import serializers, status
 from musiccityapi.models.post import Post
 from musiccityapi.serializers.post_reactions import PostReactionSerializer
 class PostSerializer(serializers.ModelSerializer):
-  created_on = serializers.DateField(format="%Y-%m-%d")
+  created_on = serializers.DateTimeField(format="%Y-%m-%d")
   reactions = PostReactionSerializer(many=True, read_only=True)
   
   class Meta:
