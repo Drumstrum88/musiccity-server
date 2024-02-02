@@ -19,13 +19,18 @@ from django.urls import path
 from musiccityapi.views import check_user, register_user
 from django.urls import include, path
 from rest_framework import routers
-from musiccityapi.views.post_reaction_views import PostReactionView
-
-from musiccityapi.views.post_view import PostView
+from musiccityapi.views import CategoryView
+from musiccityapi.views import ReactionsView
+from musiccityapi.views import UserView
+from musiccityapi.views import PostView
+from musiccityapi.views import PostReactionView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'posts', PostView, 'post')
 router.register(r'post_reactions', PostReactionView, 'post_reaction')
+router.register(r'categories', CategoryView, 'category')
+router.register(r'reactions', ReactionsView, 'reaction')
+router.register(r'users', UserView, 'user')
 
 
 urlpatterns = [
