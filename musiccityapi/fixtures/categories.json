@@ -1,0 +1,38 @@
+[
+  {
+    "model": "musiccityapi.category",
+    "pk": 1,
+    "fields": {
+      "label": "dining"
+    }
+  },
+  {
+    "model": "musiccityapi.category",
+    "pk": 2,
+    "fields": {
+      "label": "nightlife"
+    }
+  },
+  {
+    "model": "musiccityapi.category",
+    "pk": 3,
+    "fields": {
+      "label": "nature"
+    }
+  },
+  {
+    "model": "musiccityapi.category",
+    "pk": 4,
+    "fields": {
+      "label": "art"
+    }
+  },
+  {
+    "model": "musiccityapi.category",
+    "pk": 5,
+    "fields": {
+      "label": "theater"
+    }
+  }
+]
+

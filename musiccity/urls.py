@@ -27,6 +27,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'posts', PostView, 'post')
 router.register(r'post_reactions', PostReactionView, 'post_reaction')
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('checkuser', check_user),
