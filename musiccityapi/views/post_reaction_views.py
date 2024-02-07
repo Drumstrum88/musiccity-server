@@ -40,9 +40,9 @@ class PostReactionView(ViewSet):
     reaction = Reaction.objects.get(pk=request.data["reaction"])
     
     post_reaction = PostReaction.objects.create(
-      user_id=user,
-      post_id=post,
-      reaction_id=reaction,
+      user=user,
+      post=post,
+      reaction=reaction,
     )
     
     serializer = PostReactionSerializer(post_reaction)

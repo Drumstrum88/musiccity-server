@@ -6,6 +6,6 @@ from musiccityapi.models.user import User
 
 class PostReaction(models.Model):
   
-  user_id = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
-  post_id = models.ForeignKey(Post, on_delete=models.CASCADE, default=None)
-  reaction_id = models.ForeignKey(Reaction, on_delete=models.CASCADE, default=None)
+  user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+  post = models.ForeignKey(Post, on_delete=models.CASCADE, default=None, related_name='post_reactions')
+  reaction = models.ForeignKey(Reaction, on_delete=models.CASCADE, default=None)
