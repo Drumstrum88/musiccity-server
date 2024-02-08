@@ -8,6 +8,8 @@ from musiccityapi.models import PostReaction
 from musiccityapi.models import User
 from musiccityapi.serializers import PostReactionSerializer
 from musiccityapi.serializers import PostSerializer
+from django.db.models import Count
+from rest_framework import serializers
 
     
 class PostView(ViewSet):
@@ -28,7 +30,8 @@ class PostView(ViewSet):
     """Handles GET request for all Posts"""
     
     posts = Post.objects.all()
-    serializer = PostSerializer(posts, many=True)
+    post = Post.objects.annotate(reaction_count=Count('post_reactions'))
+    serializer = ViewPostReactionSerializer(post, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
   
   def create(self, request):
@@ -94,3 +97,12 @@ class PostView(ViewSet):
 
         serializer = PostReactionSerializer(reactions, many=True)
         return Response(serializer.data)
+
+class ViewPostReactionSerializer(serializers.ModelSerializer):
+  reaction_count = serializers.IntegerField(default=None)
+  created_on = serializers.DateTimeField(format="%Y-%m-%d")
+  reactions = PostReactionSerializer(many=True, read_only=True)
+  class Meta:
+    model = Post
+    fields = ('id', 'post_title', 'post_author', 'post_content', 'created_on', 'image_url', 'categories', 'reactions', 'reaction_count')
+    depth = 1

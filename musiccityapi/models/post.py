@@ -7,5 +7,5 @@ class Post(models.Model):
   post_author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
   post_content = models.CharField(max_length=400, default='')
   created_on = models.DateTimeField(auto_now_add=True)
-  image_url = models.CharField(max_length=400, default='')
+  image_url = models.CharField(max_length=1000, default='')
   categories = models.ForeignKey(Category, on_delete=models.CASCADE, default=None)

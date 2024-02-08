@@ -5,5 +5,5 @@ class ReactionSerializer(serializers.ModelSerializer):
   """JSON serializer for all reactions"""
   class Meta:
     model = Reaction
-    fields = ('id', 'label', 'image_url')
+    fields = ('id', 'label', 'image_url', 'posted_reaction')
     depth = 0
