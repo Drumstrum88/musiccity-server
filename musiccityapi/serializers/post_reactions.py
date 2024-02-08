@@ -4,5 +4,5 @@ from musiccityapi.models.postReactions import PostReaction
 class PostReactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PostReaction
-        fields = ['id', 'user', 'post', 'reaction']
+        fields = ['id', 'user', 'post', 'reaction', 'posted_reaction']
         depth = 1
